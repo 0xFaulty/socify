@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
   //   BrowserModule
   // ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'front' })
+    BrowserModule.withServerTransition({ appId: 'front' }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
