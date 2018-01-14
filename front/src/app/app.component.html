@@ -1,8 +1,15 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="../assets/images/logo.png">
-</div>
+<div class="example-container">
+  <mat-toolbar color="primary" class="toolbar-container">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <app-header></app-header>
+  </mat-toolbar>
 
-<pre>{{ version | json}}</pre>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="true">
+      <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <app-home></app-home>
+  </mat-sidenav-container>
+</div>
