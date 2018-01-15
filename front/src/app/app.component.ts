@@ -7,6 +7,7 @@ import {Bricklayer} from 'bricklayer';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'Pixabay Image Search';
 
   constructor() {
   }
