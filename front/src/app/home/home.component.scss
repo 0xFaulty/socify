@@ -1,5 +1,6 @@
 .example-card {
   width: 400px;
+  border-radius: 10px;
 }
 
 .example-header-image {
@@ -9,13 +10,12 @@
 
 .wrapper > div {
   //position: absolute;
-  left: 400px;
-  top: 400px;
-  width: 291px;
+  left: 0;
+  top: 0;
   padding: 1em;
-  background: chartreuse;
+  background: #fafafa;
 }
 
 .wrapper > div:nth-child(odd) {
-  background: aqua;
+  background: lightgrey;
 }

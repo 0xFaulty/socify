@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Bricklayer} from 'bricklayer';
 
 @Component({
   selector: 'app-root',
