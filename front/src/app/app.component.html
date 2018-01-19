@@ -3,7 +3,7 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <app-header></app-header>
+    <app-header style="width: 100%"></app-header>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container">
@@ -11,8 +11,8 @@
       <app-sidenav></app-sidenav>
     </mat-sidenav>
 
-    <app-image-list></app-image-list>
-    <!--<app-home></app-home>-->
+    <router-outlet></router-outlet>
+
   </mat-sidenav-container>
 </div>
 

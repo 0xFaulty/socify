@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ImageService} from '../shared/image.service';
+import {ImageService} from '../../shared/image.service';
 
 @Component({
   selector: 'app-image-list',
@@ -34,6 +34,7 @@ export class ImageListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._imageService.currentMessage.subscribe(message => this.searchImages(message))
   }
 
 }
