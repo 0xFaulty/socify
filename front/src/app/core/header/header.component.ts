@@ -10,6 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   message: string = "girl";
+  searchQuery: string = '';
 
   constructor(private _imageService: ImageService) { }
 

@@ -15,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SettingsComponent } from './core/settings/settings.component';
 import { ChannelsComponent } from './core/channels/channels.component';
+import {Error404Component} from './core/error404/error-404.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ChannelsComponent } from './core/channels/channels.component';
     HeaderComponent,
     ImageListComponent,
     SettingsComponent,
-    ChannelsComponent
+    ChannelsComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
