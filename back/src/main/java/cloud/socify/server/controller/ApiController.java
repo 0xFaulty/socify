@@ -1,8 +1,8 @@
-package cloud.socify.controller;
+package cloud.socify.server.controller;
 
-import cloud.socify.model.ApiError;
-import cloud.socify.model.ApiVersion;
-import cloud.socify.service.api.ApiService;
+import cloud.socify.server.model.ApiError;
+import cloud.socify.server.model.ApiVersion;
+import cloud.socify.server.service.ApiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package cloud.socify.service.api;
+package cloud.socify.server.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
