@@ -1,29 +1,29 @@
-<div *ngIf="searching">
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-</div>
+<!--<div *ngIf="searching">-->
+  <!--<mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+<!--</div>-->
 
-<mat-card style="text-align: center">
-  <h4 *ngIf="imagesFound == false" mat-subheader>No Results</h4>
-  <masonry [useImagesLoaded]="true">
-    <masonry-brick *ngFor="let image of images" class=image-container>
-      <mat-card>
-        <mat-card-header>
-          <!--<a href="{{ image.pageURL }}" target="_bank">-->
-            <div class="avatar" mat-card-avatar
-                 [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
-          <!--</a>-->
-          <mat-card-title>{{ image.user }}</mat-card-title>
-          <mat-card-subtitle>{{ image.tags }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{image.webformatURL}}">
-        <mat-card-content>
-          <p>Likes {{ image.likes }} Comments {{ image.comments }}</p>
-        </mat-card-content>
-        <!--<mat-card-actions>-->
-          <!--<button mat-button>LIKE</button>-->
-          <!--<button mat-button>SHARE</button>-->
-        <!--</mat-card-actions>-->
-      </mat-card>
-    </masonry-brick>
-  </masonry>
-</mat-card>
+<!--<mat-card style="text-align: center">-->
+  <!--<h4 *ngIf="imagesFound == false" mat-subheader>No Results</h4>-->
+  <!--<masonry [useImagesLoaded]="true">-->
+    <!--<masonry-brick *ngFor="let image of images" class=image-container>-->
+      <!--<mat-card>-->
+        <!--<mat-card-header>-->
+          <!--&lt;!&ndash;<a href="{{ image.pageURL }}" target="_bank">&ndash;&gt;-->
+            <!--<div class="avatar" mat-card-avatar-->
+                 <!--[ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+          <!--<mat-card-title>{{ image.user }}</mat-card-title>-->
+          <!--<mat-card-subtitle>{{ image.tags }}</mat-card-subtitle>-->
+        <!--</mat-card-header>-->
+        <!--<img mat-card-image src="{{image.webformatURL}}">-->
+        <!--<mat-card-content>-->
+          <!--<p>Likes {{ image.likes }} Comments {{ image.comments }}</p>-->
+        <!--</mat-card-content>-->
+        <!--&lt;!&ndash;<mat-card-actions>&ndash;&gt;-->
+          <!--&lt;!&ndash;<button mat-button>LIKE</button>&ndash;&gt;-->
+          <!--&lt;!&ndash;<button mat-button>SHARE</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;</mat-card-actions>&ndash;&gt;-->
+      <!--</mat-card>-->
+    <!--</masonry-brick>-->
+  <!--</masonry>-->
+<!--</mat-card>-->

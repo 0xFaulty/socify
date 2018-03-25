@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Bricklayer} from 'bricklayer';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,7 @@ import {Bricklayer} from 'bricklayer';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pixabay Image Search';
+  title = 'Image Search';
 
   constructor() {
   }

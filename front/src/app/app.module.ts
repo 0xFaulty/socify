@@ -8,7 +8,6 @@ import {SidenavComponent} from './core/sidenav/sidenav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import {HeaderComponent} from './core/header/header.component';
-import {MasonryModule} from './angular2-masonry';
 import {ImageService} from './shared/image.service';
 import {ImageListComponent} from './core/image-list/image-list.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -16,6 +15,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SettingsComponent } from './core/settings/settings.component';
 import { ChannelsComponent } from './core/channels/channels.component';
 import {Error404Component} from './core/error404/error-404.component';
+import {BlockGridComponent} from './core/block-grid/block-grid.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,14 @@ import {Error404Component} from './core/error404/error-404.component';
     ImageListComponent,
     SettingsComponent,
     ChannelsComponent,
-    Error404Component
+    Error404Component,
+    BlockGridComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'front' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MasonryModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
