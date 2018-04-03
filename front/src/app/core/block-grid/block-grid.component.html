@@ -1,130 +1,23 @@
-<!--<nav class="navbar fixed-top navbar-dark" *ngIf="this._contentService.getContent(this.id)" [style.background-color]="this._contentService.getColor(this.id)">-->
-<!--<a (click)="this._location.back()" style="cursor: pointer">-->
-<!--<span class="navbar-brand mb-0 h1">-->
-<!--<i class="fa fa-chevron-left" aria-hidden="true" style="color: white; padding-right: 10px;"></i>-->
-<!--{{ this._contentService.getTitle(this.id) }}-->
-<!--</span>-->
-<!--</a>-->
-<!--<span class="navbar-text" style="color: #fff">-->
-<!--{{ this._configurationService.getStrings().last_updated }} {{ this._contentService.getTime(this.id) }}-->
-<!--<i class="fa fa-refresh" style="color: #fff; padding-left: 5px;" aria-hidden="true" (click)="this._contentService.reload(this.id)"></i>-->
-<!--</span>-->
-<!--</nav>-->
+<div *ngIf="searching">
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
 
-<!--<div *ngIf="searching">-->
-<!--<mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
-<!--</div>-->
-
-<!--<mat-card style="text-align: center">-->
-<!--<h4 *ngIf="imagesFound == false" mat-subheader>No Results</h4>-->
-
-<!--<main role="main" class="tentu-content-container" (window:resize)="onResize()" *ngIf="this.searchImages('girl')">-->
-<!--<div class="flex-container" infinite-scroll (scrolled)="this.handleScroll()">-->
-<!--<div class="flex-item animated fadeIn" *ngFor="let element of images">-->
-<!--<mat-card>-->
-<!--<mat-card-header>-->
-<!--<div class="avatar" mat-card-avatar-->
-<!--[ngStyle]="{'background-image':'url('+ element.userImageURL +')', 'background-size':'40px 40px'}"></div>-->
-<!--<mat-card-title>{{ element.user }}</mat-card-title>-->
-<!--<mat-card-subtitle>{{ element.tags }}</mat-card-subtitle>-->
-<!--</mat-card-header>-->
-<!--<img mat-card-image src="{{element.webformatURL}}">-->
-<!--<mat-card-content>-->
-<!--<p>Likes {{ element.likes }} Comments {{ element.comments }}</p>-->
-<!--</mat-card-content>-->
-<!--</mat-card>-->
-<!--</div>-->
-<!--</div>-->
-<!--</main>-->
-<div class="masonry">
-  <div class="item">
-    <div class="item__content">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--medium">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--medium">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--large">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--medium">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--large">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--large">
-      <p>
-        За годы работы в кинематографе Владимир Высоцкий снялся в более чем в двадцати пяти фильмах. Его кинодебют
-        состоялся в 1958 году, во время обучения в Школе-студии МХАТ, когда он сыграл эпизодическую роль студента Пети в
-        фильме «Сверстницы».
-        В ранней фильмографии Владимира Семёновича преобладали персонажи, в образах которых он ненадолго появлялся на
-        экране, произнося несколько реплик. В 1960-х годах режиссёры, приглашая Высоцкого в кино, порой активнее
-        использовали его песенно-исполнительский потенциал, нежели драматические возможности. Первой киноработой,
-        изменившей «эпизодическое» амплуа Высоцкого, стала роль танкиста Володи в фильме белорусского режиссёра Виктора
-        Турова «Я родом из детства». Широкую известность актёру принесло участие в картине «Вертикаль». В обоих фильмах
-        впервые прозвучали с экрана песни Высоцкого; песни из «Вертикали», придавшие действию динамику и остроту, стали
-        своеобразным альпинистским фольклором и были высоко оценены и публикой, и критиками. Присутствие в кадре
-        Высоцкого могло стать причиной того, что лента ограничивалась в показах или вовсе не выпускалась на экран. Так
-        произошло с картиной «Короткие встречи» Киры Муратовой (1966), которую зрители увидели только в 1987 году.
-      </p>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--medium">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--medium">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content">
-    </div>
-  </div>
-  <div class="item">
-    <div class="item__content item__content--small">
+<mat-card style="text-align: center">
+<h4 *ngIf="imagesFound == false" mat-subheader>No Results</h4>
+<div *ngIf="imagesFound == true" class="dw">
+  <div *ngFor="let image of images" class="dw-pnl">
+    <div class="dw-pnl-cntnt">
+      <mat-card-header>
+        <div class="avatar" mat-card-avatar
+             [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}">
+        </div>
+        <mat-card-title>{{ image.user }}</mat-card-title>
+        <mat-card-subtitle>{{ image.tags }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Likes {{ image.likes }} Comments {{ image.comments }}</p>
+      </mat-card-content>
     </div>
   </div>
 </div>
+</mat-card>
