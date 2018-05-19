@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ImageService} from '../../shared/image.service';
+import {DataReceiveService} from '../../shared/data-receive.service';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({
@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   message: string = "girl";
   searchQuery: string = '';
 
-  constructor(private _imageService: ImageService) { }
+  constructor(private _imageService: DataReceiveService) { }
 
   ngOnInit() {
     this._imageService.currentMessage.subscribe(message => this.message = message)

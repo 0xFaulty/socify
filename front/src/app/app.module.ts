@@ -8,12 +8,11 @@ import {SidenavComponent} from './core/sidenav/sidenav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import {HeaderComponent} from './core/header/header.component';
-import {ImageService} from './shared/image.service';
-import {ImageListComponent} from './core/image-list/image-list.component';
+import {DataReceiveService} from './shared/data-receive.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SettingsComponent } from './core/settings/settings.component';
-import { ChannelsComponent } from './core/channels/channels.component';
+import {SettingsComponent} from './core/settings/settings.component';
+import {ChannelsComponent} from './core/channels/channels.component';
 import {Error404Component} from './core/error404/error-404.component';
 import {BlockGridComponent} from './core/block-grid/block-grid.component';
 
@@ -22,14 +21,13 @@ import {BlockGridComponent} from './core/block-grid/block-grid.component';
     AppComponent,
     SidenavComponent,
     HeaderComponent,
-    ImageListComponent,
     SettingsComponent,
     ChannelsComponent,
     Error404Component,
     BlockGridComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'front' }),
+    BrowserModule.withServerTransition({appId: 'front'}),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -37,7 +35,7 @@ import {BlockGridComponent} from './core/block-grid/block-grid.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ImageService],
+  providers: [DataReceiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

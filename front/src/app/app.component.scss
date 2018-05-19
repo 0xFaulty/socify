@@ -7,11 +7,11 @@
 }
 
 .toolbar-container {
-  height: 5%;
+  height: 45px;
 }
 
 .sidenav-container {
-  height: 95%;
+  height: calc(100% - 45px);
 }
 
 

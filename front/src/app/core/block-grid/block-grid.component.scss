@@ -34,7 +34,7 @@
 }
 .dw-pnl-cntnt {
   overflow: hidden;
-  padding: 20px;
+  //padding: 20px;
   width: 100%;
   border: 2px solid #0277BD;
   -webkit-animation: fade 0.3s;
@@ -65,4 +65,9 @@
     opacity: 1;
     transform: scale(1)
   }
+}
+.publication-text {
+  padding: 5px 20px;
+  text-align: left;
+  //font-family: Roboto, serif;
 }

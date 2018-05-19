@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ImageService} from '../../shared/image.service';
+import {DataReceiveService} from '../../shared/data-receive.service';
 
 @Component({
   selector: 'app-block-grid',
@@ -7,13 +7,13 @@ import {ImageService} from '../../shared/image.service';
   styleUrls: ['./block-grid.component.scss']
 })
 export class BlockGridComponent implements OnInit {
-  images: any[];
-  imagesFound: boolean = false;
-  searching: boolean = false;
+  publications: any[];
+  imagesFound = false;
+  searching = false;
 
   handleSuccess(data) {
     this.imagesFound = true;
-    this.images = data.hits;
+    this.publications = data;
     console.log(data.hits);
   }
 
@@ -21,12 +21,12 @@ export class BlockGridComponent implements OnInit {
     console.log(error);
   }
 
-  constructor(private _imageService: ImageService) {
+  constructor(private dataReceiveService: DataReceiveService) {
   }
 
   searchImages(query: string) {
     this.searching = true;
-    return this._imageService.getImage(query).subscribe(
+    return this.dataReceiveService.getNewsFeed(query).subscribe(
       data => this.handleSuccess(data),
       error => this.handleError(error),
       () => this.searching = false
@@ -34,7 +34,7 @@ export class BlockGridComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._imageService.currentMessage.subscribe(message => this.searchImages(message));
+    this.dataReceiveService.currentMessage.subscribe(message => this.searchImages(message));
   }
 
 }
