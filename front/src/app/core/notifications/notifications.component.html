@@ -1,0 +1,62 @@
+<mat-card>
+  <div class="dw">
+    <div class="dw-pnl">
+      <div class="dw-pnl-cntnt">
+        <mat-input-container class="search" color="green" style="border: 0">
+          <input matInput name="searchQuery">
+        </mat-input-container>
+        <div class="row">
+          <div class="column left">
+            <mat-list>
+              <mat-list-item *ngFor="let source of sources">
+                <mat-card-header>
+                  <img mat-card-avatar src={{source.icon}} class="card-avatar-no-curve">
+                  <mat-card-title>{{source.name}}</mat-card-title>
+                  <mat-card-subtitle>Test</mat-card-subtitle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div class="column right">
+            <mat-list>
+              <mat-list-item *ngFor="let source of sources">
+                <mat-card-header>
+                  <mat-slide-toggle color="primary" checked={{source.enabled}}></mat-slide-toggle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dw-pnl">
+      <div class="dw-pnl-cntnt">
+        <mat-input-container class="search" color="green">
+          <input matInput name="searchQuery">
+        </mat-input-container>
+        <div class="row">
+          <div class="column left">
+            <mat-list>
+              <mat-list-item *ngFor="let channel of channels">
+                <mat-card-header>
+                  <img mat-card-avatar src={{channel.imageSource}} style="background-size: 40px 40px; ">
+                  <mat-card-title>{{channel.name}}</mat-card-title>
+                  <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div class="column right">
+            <mat-list>
+              <mat-list-item *ngFor="let channel of channels">
+                <mat-card-header>
+                  <mat-slide-toggle color="primary" checked={{channel.enabled}}></mat-slide-toggle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

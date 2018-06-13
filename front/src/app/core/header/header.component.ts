@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataReceiveService} from '../../shared/data-receive.service';
-import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -9,21 +8,18 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class HeaderComponent implements OnInit {
 
-  message: string = "girl";
-  searchQuery: string = '';
+  message = 'girl';
+  searchQuery = '';
 
-  constructor(private _imageService: DataReceiveService) { }
+  constructor(private _imageService: DataReceiveService) {
+  }
 
   ngOnInit() {
-    this._imageService.currentMessage.subscribe(message => this.message = message)
+    this._imageService.currentMessage.subscribe(message => this.message = message);
   }
 
-  searchImages(message: string){
+  searchPublications(message: string) {
     this._imageService.changeMessage(message);
-  }
-
-  hasError(message: string){
-    return this.message === "";
   }
 
 }

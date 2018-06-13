@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ChannelsComponent} from './core/channels/channels.component';
-import {SettingsComponent} from './core/settings/settings.component';
+import {NotificationsComponent} from './core/notifications/notifications.component';
 import {BlockGridComponent} from './core/block-grid/block-grid.component';
 
 const routes: Routes = [
@@ -14,8 +14,8 @@ const routes: Routes = [
     component: ChannelsComponent
   },
   {
-    path: 'settings',
-    component: SettingsComponent
+    path: 'notifications',
+    component: NotificationsComponent
   }
 ];
 

@@ -2,25 +2,23 @@
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 
-<mat-card style="text-align: center">
+<mat-card>
   <h4 *ngIf="imagesFound == false" mat-subheader>No Results</h4>
   <div *ngIf="imagesFound == true" class="dw">
     <div *ngFor="let publication of publications" class="dw-pnl">
       <div class="dw-pnl-cntnt">
-        <mat-card-header style="padding: 20px;">
+        <mat-card-header>
           <div class="avatar" mat-card-avatar
                [ngStyle]="{'background-image':'url('+ publication.channel.imageSource +')', 'background-size':'40px 40px'}">
           </div>
-          <mat-card-title>{{ publication.channel.name }}</mat-card-title>
-          <mat-card-subtitle>{{ publication.channel.date }}</mat-card-subtitle>
+          <mat-card-title>[{{publication.channel.resource.name}}] {{publication.channel.name}}</mat-card-title>
+          <mat-card-subtitle>{{ getPublicationDate(publication.channel.date) }} fuuuuu</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <img src="{{publication.imageSource}}" style="width: 100%">
-          <div class="publication-text">
-
+          <div *ngIf="publication.text.length > 0" class="publication-text">
             {{publication.text}}
           </div>
-          <p>Likes {{ publication.likes }} Comments {{ publication.comments }}</p>
+          <img src="{{publication.imageSource}}" class="main-image">
         </mat-card-content>
       </div>
     </div>

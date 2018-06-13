@@ -11,7 +11,7 @@ import {HeaderComponent} from './core/header/header.component';
 import {DataReceiveService} from './shared/data-receive.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SettingsComponent} from './core/settings/settings.component';
+import {NotificationsComponent} from './core/notifications/notifications.component';
 import {ChannelsComponent} from './core/channels/channels.component';
 import {Error404Component} from './core/error404/error-404.component';
 import {BlockGridComponent} from './core/block-grid/block-grid.component';
@@ -21,7 +21,7 @@ import {BlockGridComponent} from './core/block-grid/block-grid.component';
     AppComponent,
     SidenavComponent,
     HeaderComponent,
-    SettingsComponent,
+    NotificationsComponent,
     ChannelsComponent,
     Error404Component,
     BlockGridComponent

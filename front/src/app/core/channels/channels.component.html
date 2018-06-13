@@ -1,3 +1,107 @@
-<p>
-  channels works!
-</p>
+<mat-card>
+  <div class="dw">
+    <div class="dw-pnl">
+      <div class="dw-pnl-cntnt">
+        <mat-input-container class="search" color="green" style="border: 0">
+          <input matInput name="searchQuery">
+        </mat-input-container>
+        <div class="row">
+          <div class="column left">
+            <mat-list>
+              <mat-list-item *ngFor="let source of sources">
+                <mat-card-header>
+                  <img mat-card-avatar src={{source.icon}} class="card-avatar-no-curve">
+                  <mat-card-title>{{source.name}}</mat-card-title>
+                  <mat-card-subtitle>Test</mat-card-subtitle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div class="column right">
+            <mat-list>
+              <mat-list-item *ngFor="let source of sources">
+                <mat-card-header>
+                  <mat-slide-toggle color="primary" checked={{source.enabled}}></mat-slide-toggle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dw-pnl">
+      <div class="dw-pnl-cntnt">
+        <mat-input-container class="search" color="green">
+          <input matInput name="searchQuery">
+        </mat-input-container>
+        <div class="row">
+          <div class="column left">
+            <mat-list>
+              <mat-list-item *ngFor="let channel of channels">
+                <mat-card-header>
+                  <img mat-card-avatar src={{channel.imageSource}} style="background-size: 40px 40px; ">
+                  <mat-card-title>{{channel.name}}</mat-card-title>
+                  <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div class="column right">
+            <mat-list>
+              <mat-list-item *ngFor="let channel of channels">
+                <mat-card-header>
+                  <mat-slide-toggle color="primary" checked={{channel.enabled}}></mat-slide-toggle>
+                </mat-card-header>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dw-pnl">
+      <div class="dw-pnl-cntnt">
+        <div class="row">
+          <div class="column left">
+            <mat-card-title>realgrumpycat</mat-card-title>
+            <mat-card-subtitle>
+              Grumpy Cat The Official Instagram for Grumpy Cat. The World's grumpiest cat! #TeamGrumpy #GrumpyCat
+            </mat-card-subtitle>
+          </div>
+          <div class="column right">
+            <img src="https://scontent-bru2-1.cdninstagram.com/vp/6fc81d63667278d3ceaeac4821d6404d/5B7E3FDC/t51.2885-19/s150x150/17595897_1700002280292981_8013272392845492224_a.jpg"
+            style="height: 100px; border-radius: 50px">
+          </div>
+        </div>
+        <div class="dw-pnl-cntnt">
+          <mat-card-header>
+            <div class="avatar" mat-card-avatar
+                 [ngStyle]="{'background-image':'url(https://scontent-bru2-1.cdninstagram.com/vp/6fc81d63667278d3ceaeac4821d6404d/5B7E3FDC/t51.2885-19/s150x150/17595897_1700002280292981_8013272392845492224_a.jpg)', 'background-size':'40px 40px'}">
+            </div>
+            <mat-card-title>realgrumpycat</mat-card-title>
+            <mat-card-subtitle>18 may 2018</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="publication-text">
+              realgrumpycatProspurrity is not always within paw’s reach but you can enter for a chance to win a Dream of Fortunes Pet Bed from @Purina and @PetSmart at PurinaFortunes.com (Link in bio). Good luck, not. #ad #FortunaForAll NO PURCHASE NECESSARY. Promotion ends 5/31/18. To play and for Official Rules, visit purinafortunes.com
+            </div>
+            <img src="https://scontent-bru2-1.cdninstagram.com/vp/600f11e14efe2af3cd1a52da242510ed/5B8D9978/t51.2885-15/e35/31928264_228133411286625_116204411822276608_n.jpg" class="main-image">
+          </mat-card-content>
+        </div>
+        <p></p>
+        <div class="dw-pnl-cntnt">
+          <mat-card-header>
+            <div class="avatar" mat-card-avatar
+                 [ngStyle]="{'background-image':'url(https://scontent-bru2-1.cdninstagram.com/vp/6fc81d63667278d3ceaeac4821d6404d/5B7E3FDC/t51.2885-19/s150x150/17595897_1700002280292981_8013272392845492224_a.jpg)', 'background-size':'40px 40px'}">
+            </div>
+            <mat-card-title>realgrumpycat</mat-card-title>
+            <mat-card-subtitle>16 may 2018</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <img src="https://scontent-bru2-1.cdninstagram.com/vp/5591b19d89d6b20c5367abafdc36c640/5B796DAF/t51.2885-15/e35/32100300_630335340653576_4274531768591187968_n.jpg" class="main-image">
+          </mat-card-content>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</mat-card>

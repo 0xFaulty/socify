@@ -37,4 +37,8 @@ export class BlockGridComponent implements OnInit {
     this.dataReceiveService.currentMessage.subscribe(message => this.searchImages(message));
   }
 
+  getPublicationDate(date: string) {
+    date = '1526799605';
+    return new Date(Number(date)).toDateString();
+  }
 }
